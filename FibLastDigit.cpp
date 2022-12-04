@@ -1,0 +1,19 @@
+#include <iostream>
+#include<cstdlib>
+long long Fib(long long n)
+{
+	long long i;
+	long long F[n+1];
+	F[0] = 0;
+	F[1] = 1;
+	for(i=2;i<=n;i++)
+		F[i] = (F[i-1] + F[i-2])%10;
+	return F[n];
+}
+int main()
+{
+	long long n,res;
+	scanf("%lld",&n);
+	res = Fib(n);
+	printf("%lld",res);
+}
